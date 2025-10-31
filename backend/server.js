@@ -30,6 +30,10 @@ try {
   console.warn('Failed to initialize uploads directory:', e);
 }
 
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+});
+
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/contact', ContactRoutes);
 app.use('/api/feedback', require('./routes/feedback'));
